@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Registration Portal
+    </title>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="manifest" href="../icons/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="../css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Coda&family=Passion+One&family=Girassol&family=Oxanium&family=Poppins&family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="../icons/android-chrome-512x512.png" height="40px" width="40px">
+      <ul>
+        <li><a href="../index.html">Hotels</a></li><!--
+        --><li><a href="flights.html">Flights</a></li><!--
+        --><li><a href="trains.html">Trains</a></li><!--
+        --><li><a href="buses.html">Buses</a></li><!--
+        --><div class="loginRegister">
+          <li id="gotoLogin"><a href="#">Login</a></li><!--
+          --><li class="linkActive"><a href="register.html">Register</a></li>
+        </div>
+        <div class="clearfix"></div>
+      </ul>
+    </div>
+    <form id="registerForm" method="POST">
+      <div class="mandatory">
+        * ALL FIELDS ARE MANDATORY
+      </div>
+      <label>Select Registration Type:</label>
+
+      <div class="btn">
+        <button form="registerForm" type="button" value="Hotel" id="btn1">Hotel</button>
+        <button form="registerForm" type="button" value="Customer" id="btn2">Customer</button>
+      </div>
+      
+      <label for="f_Name" >FIRST NAME</label>
+      <input type="text" id="f_Name"  placeholder="Enter First Name" name="firstName">
+        <br>
+
+      <label for="l_Name">LAST NAME</label>
+      <input type="text" id="l_Name"  placeholder="Enter Last Name" name="lastName">
+        <br>
+
+      <label for="c_Email">EMAIL ADDRESS</label>
+      <input type="email" id="c_Email" placeholder="Enter Email Address" name="emailAddress">
+        <br>
+
+      <label for="pw1">PASSWORD</label>
+      <input type="password" id="pw1" placeholder="Enter Password" name="pw1">
+          <br>
+
+      <label for="pw2">RE-ENTER PASSWORD</label>
+      <input type="password" id="pw2" placeholder="Confirm Password" name="pw2">
+          <br>
+
+      <input type="submit" value="SUBMIT" form="registerForm" name="submit" id="submit">
+        <br>
+    </form>
+    <div id="loginOverlay">
+      <div class="loginBackground">
+        <div class="loginForeground">
+          <div class="loginMode l">
+            <button form="loginForm" type="button" id="loginC" value="customer">CUSTOMER LOGIN</button> 
+          </div>
+          <div class="loginMode r">
+            <button form="loginForm" type="button" id="loginH" value="hotel">HOTEL LOGIN</button>
+          </div>
+          <div id="cross">
+            <a href="#">&#x2BBF</a> 
+          </div>
+          <div class="clearfix"></div>
+          <form id="loginForm" method="POST">
+
+            <label for="f_Name" >USER ID / EMAIL</label>
+            <input type="text" id="userName"  placeholder="Enter Username or Email ID" name="userName">
+              <br>
+
+            <label for="pw1">PASSWORD</label>
+            <input type="password" id="pw1" placeholder="Enter Password" name="pw1">
+              <br>
+            <a style=" color:#0000EE; text-decoration:none; position:fixed; left:47%;" href="#">Forgot Password?</a>
+              <br>
+
+            <div class="btn">
+              <button form="loginForm" type="button" value="login">LOGIN</button>
+            </div>
+
+           <a style=" color:#0000EE; text-decoration:none; position:fixed; left:42%;" href="pages/register.html">Dont have an account yet? Register now! </a>
+
+              <br>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      HelloBooking.com Limited
+      <br>
+      Copyright © 2020
+    </footer>
+  </body>
+  <script src="../js/main.js"></script>
+</html>
